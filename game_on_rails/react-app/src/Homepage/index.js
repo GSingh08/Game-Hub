@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import GamesList from "../GamesList";
 
 class Homepage extends Component {
   render() {
-    return <h1> This is the homepage </h1>;
+    return (
+      <div>
+        <GamesList />
+      </div>
+    );
   }
 }
 
