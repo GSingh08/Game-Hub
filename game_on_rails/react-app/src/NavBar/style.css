@@ -1,0 +1,36 @@
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav-item {
+  float: right;
+}
+
+.nav-item .nav-anchor {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-item .nav-anchor:hover {
+  background-color: #111;
+}
+
+.nav-bar {
+  width: 100vw;
+}
+
+.nav-title {
+  color: white;
+  float: left;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-left: 10px;
+}

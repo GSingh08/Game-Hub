@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import api from "../api";
 import GamesListDetail from "../GamesListDetail";
+import fetchJsonp from "fetch-jsonp";
+import { Router, Switch, Route, Link } from "react-router-dom";
+import "../App.css";
 
 class GamesList extends Component {
   constructor(props) {
@@ -13,10 +16,12 @@ class GamesList extends Component {
 
   componentDidMount() {
     fetchJsonp(
-      "https://www.giantbomb.com/api/games/?api_key=e41f4f79f7cb03c245793f9e1157fb759d5401eb&format=jsonp"
+      "https://www.giantbomb.com/api/games/?api_key=e41f4f79f7cb03c245793f9e1157fb759d5401eb&format=jsonp&sort=field:asc&limit=300",
+      { jsonpCallback: "json_callback", timeout: 10000 }
     )
       .then(res => res.json())
       .then(data => {
+        console.log(data);
         this.setState({
           gamesList: data.results,
           gamesDataLoaded: true
@@ -25,23 +30,24 @@ class GamesList extends Component {
       .catch(err => console.log(err));
   }
 
-  // fetchJsonp('/users.jsonp')
-  // .then(function(response) {
-  //   return response.json()
-  // }).then(function(json) {
-  //   console.log('parsed json', json)
-  // }).catch(function(ex) {
-  //   console.log('parsing failed', ex)
-  // })
+  renderGames() {
+    return this.state.gamesList.map(game => (
+      <div className="list-name">
+        <Link to={`/games/${game.id}`}>
+          <img className="list-image" src={game.image.small_url} />
+          {game.name}
+        </Link>
+      </div>
+    ));
+  }
 
   render() {
     return (
-      <div>
-        {this.state.gamesDataLoaded ? (
-          <GamesListDetail gamesList={this.state.gamesList} />
-        ) : (
-          <p> Loading </p>
-        )}
+      <div className="list">
+        <h1>Games</h1>
+        <div>
+          {this.state.gamesDataLoaded ? this.renderGames() : <div>Loading</div>}
+        </div>
       </div>
     );
   }

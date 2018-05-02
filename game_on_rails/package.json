@@ -1,5 +1,7 @@
 {
   "name": "game_on_rails",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "fetch-jsonp": "^1.1.3"
+  }
 }
