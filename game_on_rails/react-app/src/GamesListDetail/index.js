@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Router, Switch, Route, Link } from "react-router-dom";
 import fetchJsonp from "fetch-jsonp";
+import Auth from "../modules/Auth";
 
 class GamesListDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
       singleGameData: null,
-      singleGameDataLoaded: false
+      singleGameDataLoaded: false,
+      auth: Auth.isUserAuthenticated()
     };
   }
 
@@ -39,10 +41,6 @@ class GamesListDetail extends Component {
     }
   }
 
-  parseData(string) {
-    // Create a function that accepts a string of html and parses through and outputs the content of the first paragraph of the string.
-  }
-
   renderGame() {
     // return this.state.singleGameData.map(data => <p>{data.name}</p>);
     return (
@@ -52,6 +50,7 @@ class GamesListDetail extends Component {
           className="detail-image"
           src={this.state.singleGameData.image.small_url}
         />
+        <button onClick={() => this.addToFavorites()}>Add To Favorites</button>
         <div
           className="detail-description"
           dangerouslySetInnerHTML={{

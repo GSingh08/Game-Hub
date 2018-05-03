@@ -16,6 +16,7 @@ import Auth from "./modules/Auth";
 import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 import Dashboard from "./Dashboard";
+import Favorites from "./Favorites";
 
 class App extends Component {
   constructor() {
@@ -89,6 +90,7 @@ class App extends Component {
           <NavBar />
           <Route path="/" exact component={Homepage} />
           <Route path="/games" component={GamesList} />
+          <Route path="/favorites" component={Favorites} />
           <Route path="/games/:id" exact component={GamesListDetail} />
           <Route
             exact

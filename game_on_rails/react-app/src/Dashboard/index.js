@@ -1,14 +1,11 @@
-import React, { Component } from 'react',
+import React, { Component } from "react";
 
 class Dashboard extends Component {
-  constructor(){
-    super(props);
-
+  constructor() {
+    super();
   }
-  render(){
-    return (
-      <h1>Hello</h1>
-    )
+  render() {
+    return <h1>Hello</h1>;
   }
 }
 
