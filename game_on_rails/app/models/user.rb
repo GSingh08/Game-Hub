@@ -2,7 +2,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
   has_secure_password
   has_secure_token :auth_token
-  has_many :games
+  # has_many :games
 
   def invalidate_token
     self.update__columns(auth_token: nil)

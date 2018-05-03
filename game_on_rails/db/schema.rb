@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_02_143528) do
+ActiveRecord::Schema.define(version: 2018_05_03_141715) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.integer "users_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_favorites_on_users_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "name"

@@ -10,7 +10,7 @@ class ApiController < ApplicationController
   protected
 
   def render_unauthorized(message)
-    errors = {errors: [detail: message] }
+    errors = { errors: [ detail: message ] }
     render json: errors, status: :unauthorized
   end
 
@@ -20,5 +20,6 @@ class ApiController < ApplicationController
     authenticate_with_http_token do | token, options |
       User.find_by(auth_token: token)
     end
-  end 
+  end
+
 end

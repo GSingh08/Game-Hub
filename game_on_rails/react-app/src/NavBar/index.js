@@ -12,23 +12,23 @@ class NavBar extends Component {
       <div className="nav-bar">
         <ul className="nav-list">
           <li className="nav-item">
-            <a className="nav-anchor" href="default.asp">
-              Home
+            <a className="nav-anchor" href="/login">
+              Login
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-anchor" href="news.asp">
+            <a className="nav-anchor" href="/register">
+              Register
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-anchor" href="/games">
               Games
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-anchor" href="contact.asp">
-              Log In
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-anchor" href="about.asp">
-              Sign Up
+            <a className="nav-anchor" href="/dashboard">
+              Home
             </a>
           </li>
           <li className="nav-title">
