@@ -1,3 +1,5 @@
-div {
-  border: 1px solid black;
+.background {
+  background-image: url("http://gifimage.net/wp-content/uploads/2017/08/video-game-gif-20.gif");
+  background-repeat: no-repeat;
+  background-position: center;
 }

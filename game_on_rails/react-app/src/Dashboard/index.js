@@ -5,7 +5,7 @@ class Dashboard extends Component {
     super();
   }
   render() {
-    return <h1>Hello</h1>;
+    return <h1>This is Your - Board </h1>;
   }
 }
 

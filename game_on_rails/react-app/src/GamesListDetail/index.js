@@ -61,6 +61,29 @@ class GamesListDetail extends Component {
     );
   }
 
+  addToFavorites() {
+    fetch("/favorites", {
+      method: "POST",
+      body: JSON.stringify({
+        favorite: {
+          name: this.state.singleGameData.name,
+          image: this.state.singleGameData.image.small_url
+        }
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${Auth.getToken()}`,
+        token: `${Auth.getToken()}`
+      }
+    })
+      .then(res => res.json())
+
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => console.log("FETCH ERROR: " + err));
+  }
+
   render() {
     return (
       <div className="detail">

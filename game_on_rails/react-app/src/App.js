@@ -67,7 +67,12 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(res => {
+        if (res.errors) {
+          console.log("wut happened");
+          return;
+        }
         Auth.authenticateToken(res.token);
+
         this.setState({
           auth: Auth.isUserAuthenticated(),
           shouldGoToDash: true
@@ -90,8 +95,8 @@ class App extends Component {
           <NavBar />
           <Route path="/" exact component={Homepage} />
           <Route path="/games" component={GamesList} />
-          <Route path="/favorites" component={Favorites} />
           <Route path="/games/:id" exact component={GamesListDetail} />
+          <Route exact path="/favorites" render={() => <Favorites />} />
           <Route
             exact
             path="/register"

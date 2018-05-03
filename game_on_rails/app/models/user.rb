@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # has_many :games
 
   def invalidate_token
-    self.update__columns(auth_token: nil)
+    self.update_columns(auth_token: nil)
   end
 
   def self.validate_login(username, password)

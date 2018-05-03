@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 2018_05_03_141715) do
   create_table "favorites", force: :cascade do |t|
     t.string "name"
     t.string "image"
-    t.integer "users_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_favorites_on_users_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "games", force: :cascade do |t|
