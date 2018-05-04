@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Router, Switch, Route, Link } from "react-router-dom";
 import fetchJsonp from "fetch-jsonp";
 import Auth from "../modules/Auth";
+// import "./style.css";
 
 class GamesListDetail extends Component {
   constructor(props) {
@@ -90,7 +91,7 @@ class GamesListDetail extends Component {
         {this.state.singleGameDataLoaded ? (
           this.renderGame()
         ) : (
-          <div>Loading</div>
+          <div className="loading-image" />
         )}
       </div>
     );

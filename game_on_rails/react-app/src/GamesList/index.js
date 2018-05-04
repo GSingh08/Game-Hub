@@ -3,7 +3,7 @@ import api from "../api";
 import GamesListDetail from "../GamesListDetail";
 import fetchJsonp from "fetch-jsonp";
 import { Router, Switch, Route, Link } from "react-router-dom";
-import "../App.css";
+import "./style.css";
 
 class GamesList extends Component {
   constructor(props) {
@@ -35,7 +35,6 @@ class GamesList extends Component {
       <div className="list-name">
         <Link to={`/games/${game.id}`}>
           <img className="list-image" src={game.image.small_url} />
-          {game.name}
         </Link>
       </div>
     ));
@@ -43,10 +42,16 @@ class GamesList extends Component {
 
   render() {
     return (
-      <div className="list">
-        <h1>Games</h1>
-        <div>
-          {this.state.gamesDataLoaded ? this.renderGames() : <div>Loading</div>}
+      <div>
+        <h1 className="game-title">Games</h1>
+        <div className="list">
+          <div>
+            {this.state.gamesDataLoaded ? (
+              this.renderGames()
+            ) : (
+              <div className="loading" />
+            )}
+          </div>
         </div>
       </div>
     );

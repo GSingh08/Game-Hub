@@ -102,7 +102,7 @@ class App extends Component {
             path="/register"
             render={() =>
               this.state.auth ? (
-                <Redirect to="/dashboard" />
+                <Redirect to="/games" />
               ) : (
                 <RegisterForm
                   handleRegisterSubmit={this.handleRegisterSubmit}
@@ -115,7 +115,7 @@ class App extends Component {
             path="/login"
             render={() =>
               this.state.auth ? (
-                <Redirect to="/dashboard" />
+                <Redirect to="/games" />
               ) : (
                 <LoginForm handleLoginSubmit={this.handleLoginSubmit} />
               )

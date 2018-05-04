@@ -1,0 +1,14 @@
+.loading {
+  background-image: url("loading-gif-1.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+
+  height: 500px;
+  width: 100vw;
+}
+
+.game-title {
+  height: 100px;
+}

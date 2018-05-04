@@ -1,5 +1,23 @@
-.background {
-  background-image: url("http://gifimage.net/wp-content/uploads/2017/08/video-game-gif-20.gif");
+.background-1 {
+  background-image: url("background.jpeg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+  background-color: #533c3d;
+
+  border: 1px solid black;
+  height: 700px;
+  width: 100vw;
+}
+
+.title {
+  height: 1000px;
+}
+
+.button {
+  position: relative;
+  top: 600px;
+  left: 200px;
+  background-color: #533c3d;
+  border: none;
 }

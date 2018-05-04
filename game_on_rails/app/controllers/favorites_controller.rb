@@ -27,6 +27,13 @@ class FavoritesController < ApiController
       end
     end
 
+    def destroy
+      favorite = Favorite.find(params[:id])
+      favorite.destroy
+      redirect_to favorite_path
+    end
+
+
     private
     def favorite_params
       params.require(:favorite).permit(:name, :url)
