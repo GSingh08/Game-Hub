@@ -6,18 +6,56 @@
   background-color: #533c3d;
 
   border: 1px solid black;
-  height: 700px;
+  height: 650px;
   width: 100vw;
-}
-
-.title {
-  height: 1000px;
 }
 
 .button {
   position: relative;
-  top: 600px;
+  top: 400px;
   left: 200px;
   background-color: #533c3d;
   border: none;
+}
+
+.title {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.title-1 {
+  text-align: center;
+  height: 125px;
+}
+
+.description {
+  height: 800px;
+}
+
+.div-1 {
+  width: 50%;
+  height: 300px;
+  display: inline-block;
+  background-image: url("heart.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  flex-direction: column;
+}
+
+.div-2 {
+  width: 50%;
+  height: 300px;
+  display: inline-block;
+  background-image: url("book.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+
+  flex-direction: column;
+}
+
+.favorite-paragraph {
+  text-align: center;
 }

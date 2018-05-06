@@ -36,7 +36,7 @@ class FavoritesController < ApiController
 
     private
     def favorite_params
-      params.require(:favorite).permit(:name, :url)
+      params.require(:favorite).permit(:name, :image)
     end
 
 

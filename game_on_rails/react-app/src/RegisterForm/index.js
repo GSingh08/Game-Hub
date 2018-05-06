@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css";
 
 class RegisterForm extends Component {
   constructor() {
@@ -23,6 +24,7 @@ class RegisterForm extends Component {
       <div className="form">
         <form onSubmit={e => this.props.handleRegisterSubmit(e, this.state)}>
           <input
+            className="username-1"
             type="text"
             name="username"
             placeholder="username"
@@ -31,6 +33,7 @@ class RegisterForm extends Component {
           />
 
           <input
+            className="password-1"
             type="password"
             name="password"
             placeholder="password"
@@ -39,6 +42,7 @@ class RegisterForm extends Component {
           />
 
           <input
+            className="email-1"
             type="email"
             name="email"
             placeholder="email"
@@ -47,6 +51,7 @@ class RegisterForm extends Component {
           />
 
           <input
+            className="name-1"
             type="text"
             name="name"
             placeholder="name"
@@ -54,7 +59,7 @@ class RegisterForm extends Component {
             onChange={this.handleChange}
           />
 
-          <input type="submit" value="Register!" />
+          <input className="register-1" type="submit" value="Register!" />
         </form>
       </div>
     );

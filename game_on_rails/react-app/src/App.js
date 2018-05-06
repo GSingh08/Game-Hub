@@ -17,6 +17,7 @@ import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 import Dashboard from "./Dashboard";
 import Favorites from "./Favorites";
+import Footer from "./Footer";
 
 class App extends Component {
   constructor() {
@@ -93,6 +94,7 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
+
           <Route path="/" exact component={Homepage} />
           <Route path="/games" component={GamesList} />
           <Route path="/games/:id" exact component={GamesListDetail} />
@@ -115,7 +117,7 @@ class App extends Component {
             path="/login"
             render={() =>
               this.state.auth ? (
-                <Redirect to="/games" />
+                <Redirect to="/login" />
               ) : (
                 <LoginForm handleLoginSubmit={this.handleLoginSubmit} />
               )

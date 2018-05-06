@@ -1,0 +1,31 @@
+.favorite-main {
+  display: inline-block;
+  padding: 10px;
+  padding-top: 100px;
+}
+.favorites {
+  /* background-color: #533c3d; */
+  height: 100vw;
+  background-image: url("pong.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+}
+
+.favorite-image {
+  width: 200px;
+  height: 200px;
+}
+
+.favorite-name {
+  text-decoration: underline;
+}
+.favorite-title {
+  padding-top: 50px;
+  text-decoration: underline;
+}
+
+.favorite-button {
+  position: relative;
+  left: 50px;
+}

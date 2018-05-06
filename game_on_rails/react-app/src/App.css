@@ -1,40 +1,9 @@
 #root {
   display: table-row;
   border: 1px solid black;
+  height: 100%;
 }
 
-.list {
-  width: 100vw;
-  white-space: nowrap;
-  overflow: scroll;
-}
-
-.list-name {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  display: inline-block;
-  border: 1px solid black;
-  overflow: overlay;
-  white-space: normal;
-}
-
-.list-image {
-  width: 150px;
-  height: 150px;
-}
-.detail {
-  border: 1px solid black;
-}
-
-.detail-image {
-  width: 400px;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.detail-description {
-  justify-content: flex-end;
+div {
+  height: 100%;
 }

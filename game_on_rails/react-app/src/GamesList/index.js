@@ -4,6 +4,7 @@ import GamesListDetail from "../GamesListDetail";
 import fetchJsonp from "fetch-jsonp";
 import { Router, Switch, Route, Link } from "react-router-dom";
 import "./style.css";
+import Footer from "../Footer";
 
 class GamesList extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class GamesList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="background-color">
         <h1 className="game-title">Games</h1>
         <div className="list">
           <div>

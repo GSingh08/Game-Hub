@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Auth from "../modules/Auth";
+import "./style.css";
 
 class Favorites extends Component {
   constructor() {
@@ -24,12 +25,10 @@ class Favorites extends Component {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         this.setState({
           favoritesList: res.favorites,
           favoritesDataLoaded: true
         });
-        console.log(res);
       })
       .catch(err => console.log(err));
   }
@@ -41,7 +40,6 @@ class Favorites extends Component {
   // }
 
   deleteFavorite(favorite_id) {
-    console.log(favorite_id);
     fetch(`/favorites/${favorite_id}`, {
       method: "DELETE",
       headers: {
@@ -49,28 +47,32 @@ class Favorites extends Component {
         Authorization: `Token ${Auth.getToken()}`,
         token: `${Auth.getToken()}`
       }
-    });
+    }).then(res => this.fetchData());
   }
 
   // componentDidUpdate() {
   //   this.deleteFavorite();
   // }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    const prevfavoritesList = prevState.favoritesList;
-    const newfavoritesList = this.state.favoritesList;
-    if (prevfavoritesList !== newfavoritesList) {
-      this.fetchData();
-    }
-  }
+  // componentDidUpdate(prevProps, prevState, snapshot) {
+  //   const prevfavoritesList = prevState.favoritesList;
+  //   const newfavoritesList = this.state.favoritesList;
+  //   if (prevfavoritesList == null || newfavoritesList == null) {
+  //     return;
+  //   }
+  //   if (prevfavoritesList.length !== newfavoritesList.length) {
+  //     this.fetchData();
+  //   }
+  // }
 
   renderFavorites() {
     return this.state.favoritesList.map(favorite => {
       return (
-        <div key={favorite.id}>
-          <h2>{favorite.name}</h2>
-          <img src={favorite.image} />
+        <div className="favorite-main" key={favorite.id}>
+          <h2 className="favorite-name">{favorite.name}</h2>
+          <img className="favorite-image" src={favorite.image} />
           <button
+            className="favorite-button"
             onClick={e => {
               this.deleteFavorite(favorite.id);
             }}
@@ -84,7 +86,8 @@ class Favorites extends Component {
 
   render() {
     return (
-      <div>
+      <div className="favorites">
+        <h2 className="favorite-title">Favorites List</h2>
         {this.state.favoritesDataLoaded ? (
           this.renderFavorites()
         ) : (

@@ -8,7 +8,52 @@
   height: 500px;
   width: 100vw;
 }
+.background-color {
+  background-color: #533c3d;
+}
 
 .game-title {
   height: 100px;
+  color: white;
+}
+
+.list {
+  width: 100vw;
+  white-space: nowrap;
+  overflow: scroll;
+  background-color: #533c3d;
+}
+
+.game-title {
+  background-color: #533c3d;
+}
+
+.list-name {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid black;
+  overflow: overlay;
+  white-space: normal;
+}
+
+.list-image {
+  width: 150px;
+  height: 150px;
+}
+.detail {
+  border: 1px solid black;
+}
+
+.detail-image {
+  width: 350px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.detail-description {
+  justify-content: flex-end;
 }

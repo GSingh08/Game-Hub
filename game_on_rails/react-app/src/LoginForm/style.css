@@ -1,0 +1,30 @@
+.form-1 {
+  background-image: url("tetris.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 700px;
+}
+
+.form {
+  display: flex;
+}
+.username {
+  flex-direction: column;
+  position: relative;
+  top: 300px;
+  left: 272px;
+}
+
+.password {
+  flex-direction: column;
+  position: relative;
+  top: 400px;
+  left: 100px;
+}
+
+.login {
+  flex-direction: column;
+  position: relative;
+  top: 500px;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css";
 
 class LoginForm extends Component {
   constructor() {
@@ -20,9 +21,10 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form-1">
         <form onSubmit={e => this.props.handleLoginSubmit(e, this.state)}>
           <input
+            className="username"
             type="text"
             name="username"
             placeholder="username"
@@ -30,13 +32,14 @@ class LoginForm extends Component {
             onChange={this.handleChange}
           />
           <input
+            className="password"
             type="password"
             name="password"
             placeholder="password"
             value={this.state.password}
             onChange={this.handleChange}
           />
-          <input type="submit" value="Login!" />
+          <input className="login" type="submit" value="Login!" />
         </form>
       </div>
     );
