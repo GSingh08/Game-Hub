@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import Footer from "../Footer";
 
 class LoginForm extends Component {
   constructor() {
@@ -41,6 +42,7 @@ class LoginForm extends Component {
           />
           <input className="login" type="submit" value="Login!" />
         </form>
+        <Footer />
       </div>
     );
   }

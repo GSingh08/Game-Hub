@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GamesList from "../GamesList";
 import GamesListDetail from "../GamesListDetail";
 import NavBar from "../NavBar";
+import Footer from "../Footer";
 import "./style.css";
 
 class Homepage extends Component {
@@ -37,6 +38,7 @@ class Homepage extends Component {
             game to relieve the nostalgia!
           </h5>
         </div>
+        <Footer />
       </div>
     );
   }

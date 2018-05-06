@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Auth from "../modules/Auth";
 import "./style.css";
+import Footer from "../Footer";
 
 class Favorites extends Component {
   constructor() {
@@ -93,6 +94,7 @@ class Favorites extends Component {
         ) : (
           <p>Loading..</p>
         )}
+        <Footer />
       </div>
     );
   }

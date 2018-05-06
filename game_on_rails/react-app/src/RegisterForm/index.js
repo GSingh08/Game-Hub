@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.css";
+import Footer from "../Footer";
 
 class RegisterForm extends Component {
   constructor() {
@@ -61,6 +62,7 @@ class RegisterForm extends Component {
 
           <input className="register-1" type="submit" value="Register!" />
         </form>
+        <Footer />
       </div>
     );
   }

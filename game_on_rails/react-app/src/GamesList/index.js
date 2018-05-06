@@ -54,6 +54,7 @@ class GamesList extends Component {
             )}
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
