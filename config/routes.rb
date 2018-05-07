@@ -7,4 +7,7 @@ delete    "/logout"      => "sessions#destroy"
 get       "/profile"     => "users#profile"
 resources :users
 resources :favorites
+
+get '*path', to: 'catch_all#index'
+
 end
