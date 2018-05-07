@@ -117,7 +117,7 @@ class App extends Component {
             path="/login"
             render={() =>
               this.state.auth ? (
-                <Redirect to="/login" />
+                <Redirect to="/games" />
               ) : (
                 <LoginForm handleLoginSubmit={this.handleLoginSubmit} />
               )

@@ -23,6 +23,10 @@ class LoginForm extends Component {
   render() {
     return (
       <div className="form-1">
+        <h5 className="login-title">
+          Please Enter Your Username and Password.
+        </h5>
+
         <form onSubmit={e => this.props.handleLoginSubmit(e, this.state)}>
           <input
             className="username"
@@ -32,6 +36,7 @@ class LoginForm extends Component {
             value={this.state.username}
             onChange={this.handleChange}
           />
+
           <input
             className="password"
             type="password"

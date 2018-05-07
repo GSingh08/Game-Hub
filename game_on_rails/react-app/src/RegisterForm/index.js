@@ -23,6 +23,9 @@ class RegisterForm extends Component {
   render() {
     return (
       <div className="form">
+        <h4 className="register-title">
+          Sign Up to Add Favorites....More Coming Soon!
+        </h4>
         <form onSubmit={e => this.props.handleRegisterSubmit(e, this.state)}>
           <input
             className="username-1"

@@ -12,19 +12,25 @@
 .username {
   flex-direction: column;
   position: relative;
-  top: 300px;
+  top: 200px;
   left: 272px;
 }
 
 .password {
   flex-direction: column;
   position: relative;
-  top: 400px;
+  top: 250px;
   left: 100px;
 }
 
 .login {
   flex-direction: column;
   position: relative;
-  top: 500px;
+  top: 300px;
+}
+
+.login-title {
+  position: relative;
+  top: 200px;
+  left: 100px;
 }
